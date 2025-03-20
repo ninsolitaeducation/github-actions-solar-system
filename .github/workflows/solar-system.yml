@@ -37,7 +37,7 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
-            
+
     code-coverage:
         name: Code Coverage
         runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
             run: npm install
 
           - name: Run Code Coverage
-            run: npm run code-coverage
+            run: npm run coverage
 
           - name: Archive Code Coverage Result
             if: ${{ always() }}
